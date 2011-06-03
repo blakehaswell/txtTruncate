@@ -37,19 +37,19 @@
 			
 			// Truncates the element at length characters
 			function truncateElementTxt(length) {
-				currText = origTxt.substring(0, length);
-				$element.text(currTxt + settings.end);
+				currTxt = origTxt.substring(0, length);
+				$element.html(currTxt + settings.end);
 			}
 			
 			// Removes characters from the element until it fits into the desired space
 			function truncate() {
 				
 				// Put the original text back into the element
-				$element.text(origTxt);
+				$element.html(origTxt);
+				currTxt = origTxt;
 				
 				// Only continue to truncate if we have more lines than we want
 				if((currentLines = getCurrentLines()) > settings.lines) {
-					
 					
 					// If we have way more lines than we want take a guess at how much to cull
 					if(currentLines > settings.lines + 1) {
