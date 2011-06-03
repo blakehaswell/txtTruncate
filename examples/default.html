@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+	
+		<!-- Meta information and page title -->
+		<meta charset="utf-8"/>
+		<title>Default behaviour - txtTruncate - a jQuery plugin to truncate text</title>
+		
+		<!-- Load CSS -->
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<!-- Load JavaScript -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="../src/jquery.txtTruncate.min.js"></script>
+		<script>
+$(function() {
+	$("#example p").txtTruncate();
+});
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<h1>txtTruncate</h1>
+		
+		<p>The default behaviour of the txtTruncate plugin is to truncate text after 1 line.</p>
+		
+		<h2>HTML:</h2>
+<pre><code>&lt;div id="example"&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+	&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+		
+		<h2>JavaScript:</h2>
+<pre><code>$("#example p").txtTruncate();</code></pre>
+		
+		<h2>Output:</h2>
+		<div id="example">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		</div>
+	
+	</body>
+	
+</html>
