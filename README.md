@@ -44,6 +44,7 @@ Changelog
 
 ### Version 1.0 - 3 June, 2011
 
+*	Added CSS reset for min-height
 *	Added README
 *	Added examples of use
 *	Added support for HTML in the settings.end string
