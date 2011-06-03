@@ -91,7 +91,8 @@
 			// Remove any CSS attributes influencing the height of the element
 			$element.css({
 				height: "auto",
-				maxHeight: "none"
+				maxHeight: "none",
+				minHeight: 0
 			});
 			
 			// Trigger the truncate function on page resize
