@@ -42,6 +42,10 @@ Minified version created using [Google's Closure Compiler](http://closure-compil
 Changelog
 ---------
 
+### Version 1.0.1 - 11 January, 2012
+
+*   Refactored code to fix most JSLint complaints, except for a few small whitespace issues.
+
 ### Version 1.0 - 3 June, 2011
 
 *	Added CSS reset for min-height
