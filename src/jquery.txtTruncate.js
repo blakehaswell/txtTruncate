@@ -1,5 +1,5 @@
 // txtTruncate - a jQuery plugin to truncate text
-// version 1.0.1
+// version 1.0.2
 // https://github.com/blakehaswell/txtTruncate
 //
 // Copyright (c) 2011-2012 Blake Haswell
@@ -16,13 +16,13 @@
             lines: null
         };
         
+        // If we have any options then merge them with our default settings
+        if (options) {
+            $.extend(settings, options);
+        }
+        
         // Iterate over matching elements
         return this.each(function () {
-        
-            // If we have any options then merge them with our default settings
-            if (options) {
-                $.extend(settings, options);
-            }
             
             // Set up variables
             var $element = $(this),
