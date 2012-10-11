@@ -38,7 +38,7 @@ Customising:
 The jQuery plugin exposes the underlying Truncator instance via `$("#example").data("truncator");`. This means you can manipulate and change an individual instance if you require some specific, custom implementation.
 
     var truncator = $("#example").data("truncator");
-    truncator._restoreOrigTxt: function(){
+    truncator._restoreOrigTxt = function(){
 
         // Some custom changes I need to make when the element is displayed in full.
         this.$elem.addClass('restored');
@@ -61,7 +61,7 @@ Changelog
 
 * Complete rewrite to convert the plugin to a proper prototyped function for easier customisation.
 * Added Gruntfile to encapsulate minification and linting.
-* Re-enabled $(window).resize() binding having wrapped recalculation in a timeout for performance reasons.
+* Re-enabled `$(window).resize()` binding having wrapped recalculation in a timeout for performance reasons.
 
 ### Version 1.0.2 - 12 January, 2012
 
