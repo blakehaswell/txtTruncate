@@ -61,6 +61,7 @@ Changelog
 
 * Complete rewrite to convert the plugin to a proper prototyped function for easier customisation.
 * Added Gruntfile to encapsulate minification and linting.
+* Re-enabled $(window).resize() binding having wrapped recalculation in a timeout for performance reasons.
 
 ### Version 1.0.2 - 12 January, 2012
 

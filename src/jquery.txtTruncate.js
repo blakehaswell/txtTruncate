@@ -12,22 +12,32 @@
     // Constructor
     function Truncator(elem, options) {
 
-        this.$elem      = $(elem);
-        this.lineHeight = this._getLineHeight();
-        this.origHeight = this.$elem.height();
-        this.origTxt    = this.$elem.text();
+        // Cache the instance.
+        var self = this;
+
+        self.$elem      = $(elem);
+        self.lineHeight = self._getLineHeight();
+        self.origHeight = self.$elem.height();
+        self.origTxt    = self.$elem.text();
 
         // Override default settings with passed options (if any)
-        this.settings   = $.extend({}, this._defaults, options || {});
+        self.settings   = $.extend({}, self._defaults, options || {});
 
-        this._setLines();
+        self._setLines();
 
-        this.truncate();
+        self.truncate();
 
-        // Text should be truncated whenever the window is resized so that it
+        // Text should be truncated whenever the window has been resized so that it
         // works as expected on fluid layouts
-        // FIXME: This is disabled as it leads to infinite firing and thus lag on IE. It should be timeout bound anyway.
-        // $(window).bind("resize", $.proxy(this.truncate, this));
+        var timeout;
+        $(window).resize(function(){
+
+            // Clear any existing timeout.
+            clearTimeout(timeout);
+
+            // Create a new one.
+            timeout = setTimeout($.proxy(self.truncate, self), 200);
+        });
     }
 
 
