@@ -29,18 +29,38 @@ Basic usage:
 Defining options:
 
 	var options = {
-		end: "... <strong>Read more</strong>",
+		end: "...Read more",
 		lines: 3
 	};
 	$("#example").txtTruncate(options);
 
+Customising:
+The jQuery plugin exposes the underlying Truncator instance via `$("#example").data("truncator");`. This means you can manipulate and change an individual instance if you require some specific, custom implementation.
+
+    var truncator = $("#example").data("truncator");
+    truncator._restoreOrigTxt: function(){
+
+        // Some custom changes I need to make when the element is displayed in full.
+        this.$elem.addClass('restored');
+
+        // Normal processing.
+        this.$elem.text(this.origTxt);
+        return this.origTxt;
+    };
+
+
 Dev Notes
 ---------
 
-Minified version created using [Google's Closure Compiler](http://closure-compiler.appspot.com/).
+Minified version created using [UglifyJS](https://github.com/mishoo/UglifyJS) via [GruntJS](http://gruntjs.com/).
 
 Changelog
 ---------
+
+### Version 1.1.0 - 12 October, 2012
+
+* Complete rewrite to convert the plugin to a proper prototyped function for easier customisation.
+* Added Gruntfile to encapsulate minification and linting.
 
 ### Version 1.0.2 - 12 January, 2012
 
