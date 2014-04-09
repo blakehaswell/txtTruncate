@@ -1,0 +1,6 @@
+{
+    "name": "txtTruncate",
+    "version": "1.0.0",
+    "main": "src/jquery.txtTruncate.js",
+    "ignore": ["examples"]
+}
